@@ -1,4 +1,9 @@
 <?php
+
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
+use yii\captcha\Captcha;
+
 $this->title = 'سپهر کریمی صدیق';
 ?>
 
@@ -73,7 +78,7 @@ $this->title = 'سپهر کریمی صدیق';
     <div class="container">
         <div class="row">
             <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="<?= Yii::$app->request->baseUrl . '/panel/images/all.jpg'?>" class="img-fluid" alt="Colorlib Template"></a>
+                <a href="#" class="partner"><img src="<?= Yii::$app->request->baseUrl . '/panel/images/all.png'?>" class="img-fluid" alt="Colorlib Template"></a>
             </div>
         </div>
     </div>
@@ -102,7 +107,7 @@ $this->title = 'سپهر کریمی صدیق';
                         <div class="text pl-3">
                             <span class="date">2018-2020</span>
                             <h2>Bachelor of Software Engineering</h2>
-                            <span class="position">Shamsipour University</span>
+                            <span class="position">Shamsipour Technical and Cocational University</span>
                             <p>
                                 I ranked 95th in the national (Iranian) university enterance exam in 2018.
                                 <br/>
@@ -117,7 +122,7 @@ $this->title = 'سپهر کریمی صدیق';
                         <div class="text pl-3">
                             <span class="date">2016-2018</span>
                             <h2>Associate of Software Engineering</h2>
-                            <span class="position">Shamsipour University</span>
+                            <span class="position">Shamsipour Technical and Cocational University</span>
                             <p>
                                 I ranked 91th in the national (Iranian) university enterance exam in 2016.
                                 <br/>
@@ -475,7 +480,7 @@ $this->title = 'سپهر کریمی صدیق';
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
                         <h3><a href="#">So Interesting</a></h3>
-                        <span>I Walk and Exercise every day.</span>
+                        <span>I Walk and Exercise every morning</span>
                     </div>
                 </div>
             </div>
@@ -493,7 +498,7 @@ $this->title = 'سپهر کریمی صدیق';
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
                         <h3><a href="#">Backgammon </a></h3>
-                        <span>I love this Iranian game.</span>
+                        <span>I love this Iranian game</span>
                     </div>
                 </div>
             </div>
@@ -504,3 +509,94 @@ $this->title = 'سپهر کریمی صدیق';
         </div>
     </div>
 </section>
+
+<!-- contact me -->
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Contact Me</h2>
+                <p><i class="icon-heart color-danger" aria-hidden="true"></i> Don't be stranger , just say Hello.</p>
+            </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-4 shadow">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-map-signs"></span>
+                    </div>
+                    <div>
+                        <h3 class="mb-4">Address</h3>
+                        <p>Tehran, Tehran Pars</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-4 shadow">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-paper-plane"></span>
+                    </div>
+                    <div>
+                        <h3 class="mb-4">Email Address</h3>
+                        <p><a href="mailto:info@yoursite.com">sepehr.k12@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-4 shadow">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-phone2"></span>
+                    </div>
+                    <div>
+                        <h3 class="mb-4">My business</h3>
+                        <p>Comming Soon ...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-4 shadow">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-globe"></span>
+                    </div>
+                    <div>
+                        <h3 class="mb-4">Website</h3>
+                        <p><a href="#">sk12.ir</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters block-9">
+            <div class="col-lg-6 col-md-12 order-md-last d-flex">
+                <?php $form = ActiveForm::begin(['options' => ['id' => 'contact-form', 'class' => 'bg-light p-4 p-md-5 contact-form']]); ?>
+
+                <?= $form->field($contact_model, 'name')->textInput() ?>
+
+                <?= $form->field($contact_model, 'email') ?>
+
+                <?= $form->field($contact_model, 'subject') ?>
+
+                <?= $form->field($contact_model, 'body')->textarea(['rows' => 6]) ?>
+
+                <?= $form->field($contact_model, 'verifyCode')->widget(Captcha::className(), [
+                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                ]) ?>
+
+                <div class="form-group">
+                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary py-3 px-5', 'name' => 'contact-button']) ?>
+                </div>
+
+                <?php ActiveForm::end(); ?>
+
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex">
+                <div class="img" style="background-image:url(<?= Yii::$app->request->baseUrl . '/panel/images/about.jpg' ?>);"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<br/>
+<br/>

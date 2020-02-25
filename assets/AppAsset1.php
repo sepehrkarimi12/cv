@@ -22,7 +22,7 @@ class AppAsset1 extends AssetBundle
         'panel/css/style.css',        
     ];
     public $js = [
-        'panel/js/jquery.min.js',
+//        'panel/js/jquery.min.js',
         'panel/js/jquery-migrate-3.0.1.min.js',
         'panel/js/popper.min.js',
         'panel/js/bootstrap.min.js',
@@ -38,6 +38,6 @@ class AppAsset1 extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        // 'yii\bootstrap\BootstrapAsset',
+//         'yii\bootstrap\BootstrapAsset',
     ];
 }

@@ -61,7 +61,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $contact_model = new ContactForm();
+        if ($contact_model->load(Yii::$app->request->post()) && $contact_model->contact(Yii::$app->params['adminEmail'])) {
+            Yii::$app->session->setFlash('success','Thanks, Your message received to me, I response very soon.');
+            return $this->goBack();
+        }
+        return $this->render('index', ['contact_model' => $contact_model]);
     }
 
     /**
@@ -114,15 +119,5 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 }

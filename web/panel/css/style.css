@@ -8462,7 +8462,7 @@ h1, h2, h3, h4, h5,
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 100px;
+  bottom: 50px;
   z-index: 2; }
 
 .mouse-icon {
@@ -9077,7 +9077,6 @@ textarea.form-control {
   background: #3c312e; }
 
 .ftco-footer {
-  margin-top: 50px;
   font-size: 16px;
   background: #000000;
   padding: 7em 0;
