@@ -14,6 +14,9 @@ AppAsset1::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="description" content="sepehr karimi personal site or resume">
+    <meta name="keywords" content="sepehr karimi,personal site,سپهر کریمی karimi seddigh,سپهر کریمی صدیق">
+    <meta name="author" content="John Doe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
