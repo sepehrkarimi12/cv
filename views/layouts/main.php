@@ -6,6 +6,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use app\assets\AppAsset1;
+use yii\bootstrap\ActiveForm;
 
 AppAsset1::register($this);
 ?>
@@ -35,10 +36,17 @@ AppAsset1::register($this);
 
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav nav ml-auto">
-              <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
                 <?php if (!Yii::$app->user->isGuest) : ?>
-                <li class="nav-item"><a href="#home-section" class="nav-link"><span>Admin</span></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><span>Admin section</span></a></li>
+                    <li class="nav-item" onclick="document.getElementById('logout-form').submit();">
+                        <a href="#Logout-Boss" class="nav-link"><span>Logout</span></a>
+                        <?php
+                          $form = ActiveForm::begin(['action' => ['/site/logout'],'id' => 'logout-form','options' => ['method' => 'POST','style'=>"display: none;"]]);
+                          ActiveForm::end();
+                        ?>
+                    </li>
                 <?php endif; ?>
+              <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
               <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
               <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>              
               <li class="nav-item"><a href="#hobbies-section" class="nav-link"><span>Hobbies</span></a></li>
@@ -56,8 +64,8 @@ AppAsset1::register($this);
               <h2 class="ftco-heading-2">About</h2>
                 <p>I Am Iranian, I'm Graduated in Software Engineering and now I'm a Backend Developer.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-linkedin-square"></span></a></li>
-                <li class="ftco-animate"><a href="tg://user?id=sepehr_karimi"><span class="icon-telegram"></span></a></li>
+                <li class="ftco-animate"><a target="_blank" href="https://www.linkedin.com/in/sepehr-karimi-20b07a174"><span class="icon-linkedin-square"></span></a></li>
+                <li class="ftco-animate"><a target="_blank" href="https://t.me/Sepehr_karimi"><span class="icon-telegram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -88,7 +96,7 @@ AppAsset1::register($this);
                   <ul>
                     <li><span class="icon icon-map-marker"></span><span class="text">Tehran | Tehran Pars</span></li>
                     <li><span class="icon icon-telegram"></span><span class="text">@sepehr_karimi</span></li>
-                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">sepehr.k12@gmail.com</span></a></li>
+                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">sepehrkarimi12ir@gmail.com</span></a></li>
                   </ul>
                 </div>
             </div>

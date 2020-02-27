@@ -54,7 +54,7 @@ $this->title = 'سپهر کریمی صدیق';
                     <li class="d-flex"><span>Date of birth:</span> <span>April 1, 1998</span></li>
                     <li class="d-flex"><span>Address:</span> <span>Iran, Tehran, Tehran Pars</span></li>
                     <li class="d-flex"><span>Zip code:</span> <span>70433</span></li>
-                    <li class="d-flex"><span>Email:</span> <span>sepehr.k12@gmail.com</span></li>
+                    <li class="d-flex"><span>Email:</span> <span>sepehrkarimi12ir@gmail.com</span></li>
 <!--                    <li class="d-flex"><span>Phone: </span> <span>0912-299-34-45</span></li>-->
                 </ul>
               </div>
@@ -540,7 +540,7 @@ $this->title = 'سپهر کریمی صدیق';
                     </div>
                     <div>
                         <h3 class="mb-4">Email Address</h3>
-                        <p><a href="mailto:info@yoursite.com">sepehr.k12@gmail.com</a></p>
+                        <p><a href="mailto:sepehrkarimi12ir@gmail.com">sepehrkarimi12ir@gmail.com</a></p>
                     </div>
                 </div>
             </div>

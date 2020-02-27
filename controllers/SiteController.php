@@ -82,6 +82,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            Yii::$app->session->setFlash('success','You logged in BOSS.');
             return $this->goBack();
         }
 
