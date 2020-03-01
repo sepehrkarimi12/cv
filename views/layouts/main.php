@@ -20,6 +20,7 @@ AppAsset1::register($this);
     <meta name="author" content="John Doe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<?= Yii::$app->request->baseUrl . '/panel/images/logo.png' ?>">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>

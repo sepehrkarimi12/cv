@@ -4,7 +4,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\captcha\Captcha;
 
-$this->title = 'سپهر کریمی صدیق';
+$this->title = 'SEPEHR KARIMI SEDDIGH';
 ?>
 
 <!-- im a ... -->
@@ -13,7 +13,7 @@ $this->title = 'سپهر کریمی صدیق';
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
       <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-        <div class="text text-center">
+        <div class="text text-center" style="margin-top: -180px;">
             <span class="subheading">Hey! I am</span>
             <h1>Sepehr&nbsp;&nbsp;Karimi</h1>
             <h2>I'm a
@@ -39,7 +39,7 @@ $this->title = 'سپهر کریمی صدیق';
             <div class="col-md-6 col-lg-6 d-flex">
                 <div class="img-about img d-flex align-items-stretch">
                     <div class="overlay"></div>
-                    <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(<?= Yii::$app->request->baseUrl . '/panel/images/about.jpg' ?>);">
+                    <div class="img d-flex img-responsive align-self-stretch align-items-center" style="background-image:url(<?= Yii::$app->request->baseUrl . '/panel/images/about.jpg' ?>);">
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ $this->title = 'سپهر کریمی صدیق';
                     <li class="d-flex"><span>Date of birth:</span> <span>April 1, 1998</span></li>
                     <li class="d-flex"><span>Address:</span> <span>Iran, Tehran, Tehran Pars</span></li>
                     <li class="d-flex"><span>Zip code:</span> <span>70433</span></li>
-                    <li class="d-flex"><span>Email:</span> <span>sepehrkarimi12ir@gmail.com</span></li>
+                    <li class="d-flex"><span>Email:</span> <span style="word-wrap: break-word;">sepehrkarimi12ir@gmail.com</span></li>
 <!--                    <li class="d-flex"><span>Phone: </span> <span>0912-299-34-45</span></li>-->
                 </ul>
               </div>
@@ -517,7 +517,7 @@ $this->title = 'سپهر کریمی صدیق';
             <div class="col-md-7 heading-section text-center ftco-animate">
                 <h1 class="big big-2">Contact</h1>
                 <h2 class="mb-4">Contact Me</h2>
-                <p><i class="icon-heart color-danger" aria-hidden="true"></i> Don't be stranger , just say Hello.</p>
+                <p>Don't be stranger, just say Hello <i class="icon-heart color-danger" aria-hidden="true"></i></p>
             </div>
         </div>
 
