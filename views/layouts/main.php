@@ -38,7 +38,7 @@ AppAsset1::register($this);
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav nav ml-auto">
                 <?php if (!Yii::$app->user->isGuest) : ?>
-                    <li class="nav-item"><a href="" class="nav-link"><span>Admin section</span></a></li>
+                    <li class="nav-item"><a href="<?= Url::home() ?>contact/index" class="nav-link"><span>Users Texts</span></a></li>
                     <li class="nav-item" onclick="document.getElementById('logout-form').submit();">
                         <a href="#Logout-Boss" class="nav-link"><span>Logout</span></a>
                         <?php
