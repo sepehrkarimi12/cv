@@ -570,22 +570,22 @@ $this->title = 'SEPEHR KARIMI SEDDIGH';
 
         <div class="row no-gutters block-9">
             <div class="col-lg-6 col-md-12 order-md-last d-flex">
-                <?php $form = ActiveForm::begin(['options' => ['id' => 'contact-form', 'class' => 'bg-light p-4 p-md-5 contact-form']]); ?>
+                <?php $form = ActiveForm::begin(['action' => ['contact/create'], 'options' => ['id' => 'contact-form', 'class' => 'bg-light p-4 p-md-5 contact-form']]); ?>
 
                 <?= $form->field($contact_model, 'name')->textInput() ?>
 
-                <?= $form->field($contact_model, 'email') ?>
+                <?= $form->field($contact_model, 'email_or_phone_number') ?>
 
                 <?= $form->field($contact_model, 'subject') ?>
 
-                <?= $form->field($contact_model, 'body')->textarea(['rows' => 6]) ?>
+                <?= $form->field($contact_model, 'text')->textarea(['rows' => 6]) ?>
 
                 <?= $form->field($contact_model, 'verifyCode')->widget(Captcha::className(), [
                     'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
                 ]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary py-3 px-5', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('Send', ['class' => 'btn btn-primary py-3 px-5', 'name' => 'contact-button']) ?>
                 </div>
 
                 <?php ActiveForm::end(); ?>

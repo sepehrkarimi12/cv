@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Contact;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -61,11 +62,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $contact_model = new ContactForm();
-        if ($contact_model->load(Yii::$app->request->post()) && $contact_model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('success','Thanks, Your message received to me, I response very soon.');
-            return $this->goBack();
-        }
+        $contact_model = new Contact();
         return $this->render('index', ['contact_model' => $contact_model]);
     }
 
