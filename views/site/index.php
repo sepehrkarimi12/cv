@@ -587,7 +587,7 @@ $this->title = 'SEPEHR KARIMI SEDDIGH';
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 d-flex">
-                <div class="img" style="background-image:url(<?= Yii::$app->request->baseUrl . '/panel/images/about.jpg' ?>);"></div>
+                <div class="img" style="background-image:url(<?= Yii::$app->request->baseUrl . '/panel/images/contact.jpg' ?>);"></div>
             </div>
         </div>
     </div>
