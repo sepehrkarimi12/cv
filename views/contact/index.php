@@ -27,14 +27,19 @@ $this->title = 'People Texts';
             'email_or_phone_number',
             [
                 'attribute' => 'subject',
-                'label'=>'subject',
                 'format' => 'raw',
                 'value'=>function ($model) {
                     return Html::a($model->subject, ['view', 'id' => $model->id]);
                 },
             ],
             'text:ntext',
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'attribute' => 'sent_at',
+                'format' => 'raw',
+                'value'=>function ($model) {
+                    return date('Y/m/d H:i:s' ,$model->sent_at);
+                },
+            ],
         ],
     ]); ?>
 

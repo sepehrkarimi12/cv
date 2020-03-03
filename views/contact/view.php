@@ -33,6 +33,13 @@ $this->title = $model->subject;
             'email_or_phone_number',
             'subject',
             'text:ntext',
+            [
+                'attribute' => 'sent_at',
+                'format' => 'raw',
+                'value'=>function ($model) {
+                    return date('Y/m/d H:i:s' ,$model->sent_at);
+                },
+            ],
         ],
     ]) ?>
 

@@ -16,13 +16,7 @@ $this->title = 'SEPEHR KARIMI SEDDIGH';
         <div class="text text-center" style="margin-top: -180px;">
             <span class="subheading">Hey! I am</span>
             <h1>Sepehr&nbsp;&nbsp;Karimi</h1>
-            <h2>I'm a
-              <span
-                 class="txt-rotate"
-                 data-period="2000"
-                 data-rotate='[ "Backend Developer.", "PHP Developer.", "Web Developer."]'>
-              </span>
-            </h2>
+            <h2>I'm a <span class="txt-rotate" data-period="2000" data-rotate='[ "Backend", "PHP", "Web"]'></span> Developer.</h2>
         </div>
         </div>
       </div>

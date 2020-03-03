@@ -17,7 +17,7 @@ class ContactSearch extends Contact
 
     public function search($params)
     {
-        $query = Contact::find();
+        $query = Contact::find()->orderBy(['sent_at' => SORT_DESC]);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

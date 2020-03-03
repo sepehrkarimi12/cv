@@ -2,7 +2,8 @@
 
 namespace app\models;
 
-use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "contact".
@@ -12,8 +13,9 @@ use Yii;
  * @property string $email_or_phone_number
  * @property string $subject
  * @property string $text
+ * @property int $sent_at
  */
-class Contact extends \yii\db\ActiveRecord
+class Contact extends ActiveRecord
 {
     public $verifyCode;
     /**
@@ -38,6 +40,18 @@ class Contact extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['sent_at'],
+                ],
+            ],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -49,6 +63,7 @@ class Contact extends \yii\db\ActiveRecord
             'email_or_phone_number' => 'Email Or Phone Number',
             'subject' => 'Subject',
             'text' => 'Text',
+            'sent_at' => 'Sent At',
             'verifyCode' => 'Verification Code',
         ];
     }
